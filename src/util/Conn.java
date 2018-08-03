@@ -1,4 +1,4 @@
-package Test;
+package util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ import java.sql.SQLException;
  *
  * @author RZ09
  */
-public class jdbc {
+public class Conn {
 
     private static Connection conn;
     private static final String CLASS_NAME = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
@@ -30,6 +30,6 @@ public class jdbc {
     }
 
     public static void main(String[] args) {
-        jdbc.getconnection();
+        Conn.getconnection();
     }
 }

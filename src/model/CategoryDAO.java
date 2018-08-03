@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Test;
+package model;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -13,13 +13,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import util.Conn;
+
 /**
  *
  * @author RZ09
  */
 public class CategoryDAO extends DAO<Category> {
 
-    private static final Connection CONN = jdbc.getconnection();
+    private static final Connection CONN = Conn.getconnection();
 
     @Override
     public List<Category> getAll() throws SQLException {

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Test;
+package view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -35,6 +35,15 @@ import javax.swing.JTextField;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableModel;
+
+import model.Category;
+import model.CategoryDAO;
+import model.Manufacturer;
+import model.ManufacturerDAO;
+import model.Product;
+import model.ProductDAO;
+import model.Warehouse;
+import model.WarehouseDAO;
 
 /**
  *

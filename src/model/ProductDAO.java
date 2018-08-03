@@ -1,4 +1,4 @@
-package Test;
+package model;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -11,9 +11,11 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import util.Conn;
+
 public class ProductDAO extends DAO<Product> {
 
-    private static final Connection CONN = jdbc.getconnection();
+    private static final Connection CONN = Conn.getconnection();
 
     public boolean insert(Product entity) {
         String sql = "INSERT INTO HANG_HOA VALUES(?,?,?,?,?,?,?,?)";

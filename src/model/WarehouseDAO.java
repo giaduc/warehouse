@@ -1,4 +1,4 @@
-package Test;
+package model;
 
 import java.io.Serializable;
 import java.sql.Connection;
@@ -10,9 +10,11 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import util.Conn;
+
 public class WarehouseDAO extends DAO<Warehouse> {
 
-    private static final Connection CONN = jdbc.getconnection();
+    private static final Connection CONN = Conn.getconnection();
 
     @Override
     public List<Warehouse> getAll() throws SQLException {
