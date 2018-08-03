@@ -16,8 +16,8 @@ public class LeftPanel extends JPanel {
 
 	private JTable tblWarehouse;
 
-	String column[] = { "No.", "Warehouse" };
-	String data[][] = { { "", "", "" }, { "", "", "" }, { "", "", "" } };
+	private String column[] = { "No.", "Warehouse" };
+	private String data[][] = { { "", "", "" }, { "", "", "" }, { "", "", "" } };
 
 	public LeftPanel() {
 		tblWarehouse = new JTable(new DefaultTableModel(data, column));

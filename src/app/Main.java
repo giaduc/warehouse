@@ -8,11 +8,11 @@ import controller.WarehouseController;
  */
 public class Main {
 	
-	WarehouseController controller;
+	private static WarehouseController controller;
 
 	public static void main(String[] args) {
-		WarehouseController.control();
-//		new View().setVisible(true);
+		controller = new WarehouseController();
+		controller.loadLayout();
 	}
 
 }

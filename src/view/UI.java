@@ -4,49 +4,33 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-/**
- * main frame
- * layout: BorderLayout
- * size: 850 x  600
- * include 2 panels:
- * - LeftPanel: BorderLayout.WEST
- * - ContentPanel: BorderLayout.CENTER
- */
 public class UI extends JFrame {
-
-	private LeftPanel leftPanel;
-	private ContentPanel contentPanel;
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	private static final String APPLICATION_TITLE = "Quản lý kho hàng";
 
 	public UI() {
-		
-		// config jframe
 		setLayout(new BorderLayout());
-		setTitle("Quản lý kho hàng");
+		setTitle(APPLICATION_TITLE);
 		setSize(850, 600);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
-		
-		// add panels
-		addLeftPanel();
-		addContentPanel();
-		
 		setVisible(true);
 	}
 
-	private void addLeftPanel() {
-		leftPanel = new LeftPanel();
+	public void loadLeftPanel(LeftPanel leftPanel) {
 		add(leftPanel, BorderLayout.WEST);
+		pack();
 	}
 
-	private void addContentPanel() {
-		contentPanel = new ContentPanel();
+	public void loadContentPanel(ContentPanel contentPanel) {
 		add(contentPanel, BorderLayout.CENTER);
+		pack();
 	}
 
 }
