@@ -5,10 +5,6 @@
  */
 package model;
 
-/**
- *
- * @author RZ09
- */
 public class Category {
 
     private int id;

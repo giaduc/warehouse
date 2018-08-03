@@ -1,104 +1,104 @@
 package model;
 
+import java.util.Date;
+
 public class Product {
 
-    private String name;
+	private int id;
+	private String name;
+	private int price;
+	private Date expiryDate;
+	private int amount;
+	private int categoryId;
+	private int manufacturerId;
+	private int warehouseId;
 
-    private String code;
+	public Product() {
+		super();
+	}
 
-    private String expiryDate;
+	public Product(int id, String name, int price, Date expiryDate, int amount, int categoryId, int manufacturerId,
+			int warehouseId) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.expiryDate = expiryDate;
+		this.amount = amount;
+		this.categoryId = categoryId;
+		this.manufacturerId = manufacturerId;
+		this.warehouseId = warehouseId;
+	}
 
-    private String phanloai;
+	public int getId() {
+		return id;
+	}
 
-    private String hang;
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    private String kho;
+	public String getName() {
+		return name;
+	}
 
-    private String price;
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    private String tonKho;
+	public int getPrice() {
+		return price;
+	}
 
-    public Product() {
-    }
+	public void setPrice(int price) {
+		this.price = price;
+	}
 
-    public Product(String name, String code, String expiryDate, String phanloai, String hang, String kho, String price, String tonKho) {
-        this.name = name;
-        this.code = code;
-        this.expiryDate = expiryDate;
-        this.phanloai = phanloai;
-        this.hang = hang;
-        this.kho = kho;
-        this.price = price;
-        this.tonKho = tonKho;
-    }
+	public Date getExpiryDate() {
+		return expiryDate;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setExpiryDate(Date expiryDate) {
+		this.expiryDate = expiryDate;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public int getAmount() {
+		return amount;
+	}
 
-    public String getCode() {
-        return code;
-    }
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+	public int getCategoryId() {
+		return categoryId;
+	}
 
-    public String getExpiryDate() {
-        return expiryDate;
-    }
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
 
-    public void setExpiryDate(String expiryDate) {
-        this.expiryDate = expiryDate;
-    }
+	public int getManufacturerId() {
+		return manufacturerId;
+	}
 
-    public String getPhanloai() {
-        return phanloai;
-    }
+	public void setManufacturerId(int manufacturerId) {
+		this.manufacturerId = manufacturerId;
+	}
 
-    public void setPhanloai(String phanloai) {
-        this.phanloai = phanloai;
-    }
+	public int getWarehouseId() {
+		return warehouseId;
+	}
 
-    public String getHang() {
-        return hang;
-    }
+	public void setWarehouseId(int warehouseId) {
+		this.warehouseId = warehouseId;
+	}
 
-    public void setHang(String hang) {
-        this.hang = hang;
-    }
-
-    public String getKho() {
-        return kho;
-    }
-
-    public void setKho(String kho) {
-        this.kho = kho;
-    }
-
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
-    public String getTonKho() {
-        return tonKho;
-    }
-
-    public void setTonKho(String tonKho) {
-        this.tonKho = tonKho;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" + "name=" + name + ", code=" + code + ", expiryDate=" + expiryDate + ", phanloai=" + phanloai + ", hang=" + hang + ", kho=" + kho + ", price=" + price + ", tonKho=" + tonKho + '}';
-    }
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", expiryDate=" + expiryDate + ", amount="
+				+ amount + ", categoryId=" + categoryId + ", manufacturerId=" + manufacturerId + ", warehouseId="
+				+ warehouseId + "]";
+	}
 
 }
