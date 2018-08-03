@@ -12,28 +12,34 @@ public class ContentTopPanel extends JPanel {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	private static final String BUTTON_SKIP = "Skip";
+	private static final String BUTTON_EDIT = "Edit";
+	private static final String BUTTON_ADD = "Add";
+	private static final String BUTTON_DELETE = "Delete";
+	private static final String BUTTON_SAVE = "Save";
+
 	// JButton
-	private JButton btnThem;
-	private JButton btnSua;
-	private JButton btnXoa;
-	private JButton btnLuu;
-	private JButton btnBoQua;
+	private JButton btnAdd;
+	private JButton btnEdit;
+	private JButton btnDelete;
+	private JButton btnSave;
+	private JButton btnSkip;
 
 	public ContentTopPanel() {
 		setLayout(new FlowLayout(FlowLayout.LEFT));
 		initButtons();
-		add(btnThem);
-		add(btnSua);
-		add(btnXoa);
-		add(btnLuu);
-		add(btnBoQua);
+		add(btnAdd);
+		add(btnEdit);
+		add(btnDelete);
+		add(btnSave);
+		add(btnSkip);
 	}
 
 	private void initButtons() {
-		btnBoQua = new JButton("Skip");
-		btnSua = new JButton("Edit");
-		btnThem = new JButton("Add");
-		btnXoa = new JButton("Delete");
-		btnLuu = new JButton("Save");
+		btnSkip = new JButton(BUTTON_SKIP);
+		btnEdit = new JButton(BUTTON_EDIT);
+		btnAdd = new JButton(BUTTON_ADD);
+		btnDelete = new JButton(BUTTON_DELETE);
+		btnSave = new JButton(BUTTON_SAVE);
 	}
 }

@@ -11,13 +11,15 @@ public class BExportPanel extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	private static final String BUTTON_EXPORT = "Export";
 
-	private JButton btnKetXuat;
+	private JButton btnExport;
 	
 	public BExportPanel() {
 		setLayout(new FlowLayout(FlowLayout.RIGHT));
 		
-		btnKetXuat = new JButton("Export");
-		add(btnKetXuat);
+		btnExport = new JButton(BUTTON_EXPORT);
+		add(btnExport);
 	}
 }
