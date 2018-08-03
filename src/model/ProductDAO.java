@@ -1,6 +1,5 @@
 package model;
 
-import java.io.Serializable;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -78,35 +77,6 @@ public class ProductDAO extends DAO<Product> {
 		return products;
 	}
 
-	/**
-	 * update Product by code
-	 */
-	@Override
-	public void update(Product entity) {
-
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getId() == entity.getId()) {
-				list.set(i, entity);
-			}
-		}
-
-	}
-
-	/**
-	 * find Product by code or name
-	 */
-	@Override
-	public Product find(Serializable id) {
-
-//		for (Product p : list) {
-//			if (p.getId() == id) {
-//				return p;
-//			}
-//		}
-
-		return null;
-	}
-
 	public Product find(List<Product> products, int id) {
 		for (Product p : products) {
 			if (id == p.getId()) {
@@ -116,14 +86,6 @@ public class ProductDAO extends DAO<Product> {
 		return null;
 	}
 
-	/**
-	 * find Product by Warehouse
-	 */
-	@Override
-	public List<Product> findBy(Serializable by) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public List<Product> findBy(List<Product> products, int id) {
 		List<Product> searched = new ArrayList<>();
@@ -158,6 +120,12 @@ public class ProductDAO extends DAO<Product> {
 		// } catch (SQLException ex) {
 		// Logger.getLogger(ProductDAO.class.getName()).log(Level.SEVERE, null, ex);
 		// }
+	}
+
+	@Override
+	public Product findByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

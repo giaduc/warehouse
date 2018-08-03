@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -38,18 +37,6 @@ public class ManufacturerDAO extends DAO<Manufacturer> {
 		return manufacturers;
 	}
 
-	@Override
-	public void update(Manufacturer entity) {
-		throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
-																		// Tools | Templates.
-	}
-
-	@Override
-	public Manufacturer find(Serializable id) {
-
-		return null;
-	}
-
 	public Manufacturer find(List<Manufacturer> manufacturers, String id) {
 		for (Manufacturer m : manufacturers) {
 			if (id.trim().equals(m.getName().trim())) {
@@ -60,9 +47,9 @@ public class ManufacturerDAO extends DAO<Manufacturer> {
 	}
 
 	@Override
-	public List<Manufacturer> findBy(Serializable by) {
-		throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
-																		// Tools | Templates.
+	public Manufacturer findByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

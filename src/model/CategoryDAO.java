@@ -5,7 +5,6 @@
  */
 package model;
 
-import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -37,17 +36,6 @@ public class CategoryDAO extends DAO<Category> {
 		return categories;
 	}
 
-	@Override
-	public void update(Category entity) {
-		// TODO update Category
-	}
-
-	@Override
-	public Category find(Serializable id) {
-		// TODO find Category
-		return null;
-	}
-
 	public Category find(List<Category> categories, String name) {
 		for (Category c : categories) {
 			if (name.trim().equals(c.getName().trim())) {
@@ -58,16 +46,8 @@ public class CategoryDAO extends DAO<Category> {
 	}
 
 	@Override
-	public List<Category> findBy(Serializable by) {
-		// TODO findBy Category
+	public Category findByName(String name) {
+		// TODO Auto-generated method stub
 		return null;
-	}
-
-	public static void main(String[] args) throws SQLException {
-		// Run test
-		CategoryDAO categoryDAO = new CategoryDAO();
-		for (Category c : categoryDAO.getAll()) {
-			System.out.println(c);
-		}
 	}
 }

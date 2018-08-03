@@ -1,18 +1,15 @@
 package model;
 
-import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class WarehouseDAO extends DAO<Warehouse> {
 
 	private static final String SELECT_ALL = "SELECT * FROM WAREHOUSE";
-	
+
 	@Override
 	public List<Warehouse> getAll() throws SQLException {
 		List<Warehouse> warehouses = new ArrayList<>();
@@ -36,18 +33,6 @@ public class WarehouseDAO extends DAO<Warehouse> {
 		return warehouses;
 	}
 
-	@Override
-	public void update(Warehouse entity) {
-		// TODO update Warehouse
-
-	}
-
-	@Override
-	public Warehouse find(Serializable id) {
-		// TODO find Warehouse
-		return null;
-	}
-
 	public Warehouse find(List<Warehouse> warehouses, String name) {
 		for (Warehouse w : warehouses) {
 			if (name.trim().equals(w.getName().trim().trim())) {
@@ -58,23 +43,9 @@ public class WarehouseDAO extends DAO<Warehouse> {
 	}
 
 	@Override
-	public List<Warehouse> findBy(Serializable by) {
+	public Warehouse findByName(String name) {
 		// TODO Auto-generated method stub
 		return null;
-	}
-
-	public static void main(String[] args) {
-		WarehouseDAO warehouseDAO = new WarehouseDAO();
-		List<Warehouse> warehouses = new ArrayList<>();
-		try {
-			warehouses = warehouseDAO.getAll();
-		} catch (SQLException ex) {
-			Logger.getLogger(WarehouseDAO.class.getName()).log(Level.SEVERE, null, ex);
-		}
-		for (Warehouse w : warehouses) {
-			System.out.println(w);
-		}
-
 	}
 
 }
