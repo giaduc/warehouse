@@ -45,10 +45,6 @@ import model.ProductDAO;
 import model.Warehouse;
 import model.WarehouseDAO;
 
-/**
- *
- * @author THANGTONY
- */
 public class View extends JFrame {
 
     // JPanel
@@ -124,7 +120,7 @@ public class View extends JFrame {
         getProducts();
 
         // TODO Auto-generated constructor stub
-        setTitle("Quản lý kho hàng");
+        setTitle("Quáº£n lÃ½ kho hÃ ng");
         setSize(850, 600);
         setLocationRelativeTo(null);// can giua
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -162,13 +158,13 @@ public class View extends JFrame {
         // pnlContent_Top
         pnlContent_Top = new JPanel();
         pnlContent_Top.setLayout(new FlowLayout(FlowLayout.LEFT));
-        btnBoQua = new JButton("Bỏ qua");
-        btnKetXuat = new JButton("Kết xuất");
-        btnSua = new JButton("Sửa");
-        btnThem = new JButton("Thêm");
-        btnTim = new JButton("Tìm");
-        btnXoa = new JButton("Xóa");
-        btnLuu = new JButton("Lưu");
+        btnBoQua = new JButton("Bá»� qua");
+        btnKetXuat = new JButton("Káº¿t xuáº¥t");
+        btnSua = new JButton("Sá»­a");
+        btnThem = new JButton("ThÃªm");
+        btnTim = new JButton("TÃ¬m");
+        btnXoa = new JButton("XÃ³a");
+        btnLuu = new JButton("LÆ°u");
         pnlContent_Top.add(btnThem);
         pnlContent_Top.add(btnSua);
         pnlContent_Top.add(btnXoa);
@@ -191,15 +187,15 @@ public class View extends JFrame {
         txtTenHangHoa = new JTextField(30);
         txtTimKiem = new JTextField(10);
 
-        lblGiaNhap = new JLabel("Giá nhập", JLabel.LEFT);
-        lblHanSuDung = new JLabel("Hạn sử dụng", JLabel.LEFT);
-        lblHangSanXuat = new JLabel("Hãng sản xuất", JLabel.LEFT);
+        lblGiaNhap = new JLabel("GiÃ¡ nháº­p", JLabel.LEFT);
+        lblHanSuDung = new JLabel("Háº¡n sá»­ dá»¥ng", JLabel.LEFT);
+        lblHangSanXuat = new JLabel("HÃ£ng sáº£n xuáº¥t", JLabel.LEFT);
         lblKho = new JLabel("Kho");
-        lblMaHangHoa = new JLabel("Mã Hàng Hóa", JLabel.LEFT);
-        lblPhanLoai = new JLabel("Phân loại", JLabel.RIGHT);
-        lblSoLuongTonKho = new JLabel("Số lượng tồn kho", JLabel.LEFT);
-        lblTenHangHoa = new JLabel("Tên Hàng Hóa", JLabel.LEFT);
-        lblTimKiem = new JLabel("Tìm kiếm", JLabel.LEFT);
+        lblMaHangHoa = new JLabel("MÃ£ HÃ ng HÃ³a", JLabel.LEFT);
+        lblPhanLoai = new JLabel("PhÃ¢n loáº¡i", JLabel.RIGHT);
+        lblSoLuongTonKho = new JLabel("Sá»‘ lÆ°á»£ng tá»“n kho", JLabel.LEFT);
+        lblTenHangHoa = new JLabel("TÃªn HÃ ng HÃ³a", JLabel.LEFT);
+        lblTimKiem = new JLabel("TÃ¬m kiáº¿m", JLabel.LEFT);
 
         String[] dataKho = getWarehouseName();
         String[] dataHangsanxuat = getManufacturer();
@@ -245,7 +241,7 @@ public class View extends JFrame {
 
         String data2[][] = {{"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}, {"", "", "", ""}};
 
-        String column2[] = {"Mã Hàng Hóa", "Tên Hàng Hóa", "Hạn Sử Dụng", "Số Lượng Tồn Kho"};
+        String column2[] = {"MÃ£ HÃ ng HÃ³a", "TÃªn HÃ ng HÃ³a", "Háº¡n Sá»­ Dá»¥ng", "Sá»‘ LÆ°á»£ng Tá»“n Kho"};
         tblKetXuat = new JTable(new DefaultTableModel(data2, column2));
         tblKetXuat.setSize(600, 300);
         JScrollPane spKetXuat = new JScrollPane(tblKetXuat, JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,
@@ -469,7 +465,7 @@ public class View extends JFrame {
     
     private void left() {
         pnlLeft = new JPanel();
-        String column[] = {"STT", "Tên Kho"};
+        String column[] = {"STT", "TÃªn Kho"};
 
         // getWarehouseData
         String data[][] = getWarehouseData();
