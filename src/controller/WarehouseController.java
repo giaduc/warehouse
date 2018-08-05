@@ -1,26 +1,26 @@
 package controller;
 
-import view.CBottomPanel;
+import view.CBottomContainerPanel;
 import view.CCenterPanel;
 import view.BExportPanel;
 import view.BSearchPanel;
 import view.ContentBottomPanel;
 import view.ContentCenterPanel;
-import view.ContentPanel;
+import view.ContentContainerPanel;
 import view.ContentTopPanel;
 import view.LeftPanel;
-import view.UI;
+import view.UIContainer;
 
 public class WarehouseController {
 
-	private UI ui;
+	private UIContainer ui;
 	private LeftPanel leftPanel;
-	private ContentPanel contentPanel;
+	private ContentContainerPanel contentPanel;
 	private ContentTopPanel contentTopPanel;
 	
 	private CCenterPanel cCenterPanel;
 	
-	private CBottomPanel cBottomPanel;
+	private CBottomContainerPanel cBottomPanel;
 	private BSearchPanel bSearchPanel;
 	private BExportPanel bExportPanel;
 	
@@ -29,7 +29,7 @@ public class WarehouseController {
 	private ContentBottomPanel contentBottomPanel;
 
 	public void loadLayout() {
-		ui = new UI();
+		ui = new UIContainer();
 
 		// LeftPanel
 		leftPanel = new LeftPanel();
@@ -42,7 +42,7 @@ public class WarehouseController {
 		bExportPanel = new BExportPanel();
 		
 		cCenterPanel = new CCenterPanel();
-		cBottomPanel = new CBottomPanel();
+		cBottomPanel = new CBottomContainerPanel();
 		cBottomPanel.loadCSearchPanel(bSearchPanel);
 		cBottomPanel.loadCExportPanel(bExportPanel);
 		
@@ -53,7 +53,7 @@ public class WarehouseController {
 		// ContentBottomPanel
 		contentBottomPanel = new ContentBottomPanel();
 
-		contentPanel = new ContentPanel();
+		contentPanel = new ContentContainerPanel();
 		contentPanel.loadContentTopPanel(contentTopPanel);
 		contentPanel.loadContentCenterPanel(contentCenterPanel);
 		contentPanel.loadContentBottomPanel(contentBottomPanel);

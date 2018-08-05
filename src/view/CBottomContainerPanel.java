@@ -4,14 +4,14 @@ import java.awt.BorderLayout;
 
 import javax.swing.JPanel;
 
-public class CBottomPanel extends JPanel {
+public class CBottomContainerPanel extends JPanel {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public CBottomPanel() {
+	public CBottomContainerPanel() {
 		setLayout(new BorderLayout());
 	}
 

@@ -19,8 +19,8 @@ public class ContentCenterPanel extends JPanel {
 		add(cCenterPanel, BorderLayout.CENTER);
 	}
 
-	public void loadCBottomPanel(CBottomPanel cBottomPanel) {
-		add(cBottomPanel, BorderLayout.SOUTH);
+	public void loadCBottomPanel(CBottomContainerPanel cBottomContainerPanel) {
+		add(cBottomContainerPanel, BorderLayout.SOUTH);
 	}
 
 }

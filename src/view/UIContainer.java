@@ -4,7 +4,7 @@ import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-public class UI extends JFrame {
+public class UIContainer extends JFrame {
 
 	/**
 	 * 
@@ -13,7 +13,7 @@ public class UI extends JFrame {
 	
 	private static final String APPLICATION_TITLE = "Quản lý kho hàng";
 
-	public UI() {
+	public UIContainer() {
 		setLayout(new BorderLayout());
 		setTitle(APPLICATION_TITLE);
 		setSize(850, 600);
@@ -28,7 +28,7 @@ public class UI extends JFrame {
 		pack();
 	}
 
-	public void loadContentPanel(ContentPanel contentPanel) {
+	public void loadContentPanel(ContentContainerPanel contentPanel) {
 		add(contentPanel, BorderLayout.CENTER);
 		pack();
 	}

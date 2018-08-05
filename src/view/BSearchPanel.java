@@ -1,6 +1,8 @@
 package view;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -13,7 +15,7 @@ public class BSearchPanel extends JPanel {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private static final String BUTTON_SEARCH = "Search";
 	private static final String LABEL_SEARCH = "Search";
 
@@ -23,7 +25,7 @@ public class BSearchPanel extends JPanel {
 
 	public BSearchPanel() {
 		setLayout(new FlowLayout(FlowLayout.LEFT));
-		
+
 		initComponents();
 		addComponents();
 	}
@@ -32,6 +34,16 @@ public class BSearchPanel extends JPanel {
 		btnSearch = new JButton(BUTTON_SEARCH);
 		txtSearch = new JTextField(10);
 		lblSearch = new JLabel(LABEL_SEARCH, JLabel.LEFT);
+
+		btnSearch.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO btnSearch
+				System.out.println("btnSearch");
+			}
+		});
+		
+		
 	}
 
 	private void addComponents() {

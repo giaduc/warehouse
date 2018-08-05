@@ -3,6 +3,8 @@ package view;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
@@ -85,6 +87,31 @@ public class CCenterPanel extends JPanel {
 		cboWarehouse = new JComboBox();
 		cboManufacturer = new JComboBox();
 		cboCategory = new JComboBox();
+
+		cboWarehouse.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent ae) {
+				// int selectedW = cboKho.getSelectedIndex() + 1;
+
+				// fill to table
+				// fillToTable(productDAOInit.filterProductByWarehouse(productsInit,
+				// String.valueOf(selectedW)));
+			}
+		});
+
+		cboManufacturer.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent ae) {
+				// TODO cboManufacturer ActionEvent
+			}
+		});
+
+		cboCategory.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent ae) {
+				// TODO cboCategory ActionEvent
+			}
+		});
 	}
 
 	private void addTextField() {

@@ -1,6 +1,8 @@
 package view;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -41,5 +43,46 @@ public class ContentTopPanel extends JPanel {
 		btnAdd = new JButton(BUTTON_ADD);
 		btnDelete = new JButton(BUTTON_DELETE);
 		btnSave = new JButton(BUTTON_SAVE);
+
+		btnSkip.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO btnSkip
+				System.out.println("btnSkip");
+			}
+		});
+
+		btnEdit.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO btnEdit
+				System.out.println("btnEdit");
+			}
+		});
+
+		btnAdd.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO btnAdd
+				System.out.println("btnAdd");
+			}
+		});
+
+		btnDelete.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO btnDelete
+				System.out.println("btnDelete");
+			}
+		});
+
+		btnSave.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO btnSave
+				System.out.println("btnSave");
+			}
+		});
+
 	}
 }
